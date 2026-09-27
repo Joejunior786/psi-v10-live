@@ -9,8 +9,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
 from pydantic import BaseModel
 
-BINANCE_REST = os.getenv(BINANCE_REST = os.getenv("BINANCE_REST", "https://data-api.binance.vision")
-BINANCE_WS = os.getenv(BINANCE_WS = os.getenv("BINANCE_WS", "wss://data-stream.binance.vision/ws")
+BINANCE_REST = os.getenv("BINANCE_REST", "https://data-api.binance.vision")
+BINANCE_WS = os.getenv("BINANCE_WS", "wss://data-stream.binance.vision/ws")
 MAX_SYMBOLS = int(os.getenv("MAX_SYMBOLS", "150"))
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", "40"))
 REFRESH_SECONDS = float(os.getenv("REFRESH_SECONDS", "2"))
